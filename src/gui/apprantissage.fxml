@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ApprantissageController">
+   <children>
+      <ImageView fitHeight="460.0" fitWidth="643.0" layoutX="8.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resources/ImagesProjet/apprantissage-options.JPG" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="65.0" layoutX="416.0" layoutY="416.0" stroke="BLACK" strokeType="INSIDE" width="133.0" />
+      <Button fx:id="btStart" layoutX="416.0" layoutY="416.0" mnemonicParsing="false" onAction="#onClickButtonStart" prefHeight="65.0" prefWidth="133.0" text="START">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <ProgressBar fx:id="pgrBar" layoutX="225.0" layoutY="385.0" prefWidth="200.0" progress="0.0" />
+      <TextArea fx:id="msgBox" editable="false" layoutX="118.0" layoutY="187.0" prefHeight="190.0" prefWidth="413.0" />
+      <Button fx:id="retour" layoutX="92.0" layoutY="416.0" mnemonicParsing="false" onAction="#onClickButtonRetour" prefHeight="65.0" prefWidth="133.0" text="BACK" textFill="WHITE">
+         <font>
+            <Font name="18thCentury" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="65.0" layoutX="118.0" layoutY="33.0" stroke="BLACK" strokeType="INSIDE" width="405.0" />
+      <Text fill="#f6ff00" layoutX="220.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LEARNING" wrappingWidth="209.13671875">
+         <font>
+            <Font name="18thCentury" size="51.0" />
+         </font>
+      </Text>
+      <MenuBar fx:id="menu" disable="true" layoutX="8.0" layoutY="5.0" prefHeight="0.0" prefWidth="634.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="IA">
+               <items>
+                  <MenuItem fx:id="Configuration" mnemonicParsing="false" text="Configuration" />
+                  <MenuItem fx:id="Modeles" mnemonicParsing="false" text="Modeles" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Button fx:id="play" layoutX="254.0" layoutY="416.0" mnemonicParsing="false" onAction="#onClickPlay" prefHeight="65.0" prefWidth="133.0" text="PLAY">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

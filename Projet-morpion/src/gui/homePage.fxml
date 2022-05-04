@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.HomePageController">
+   <children>
+      <ImageView fitHeight="460.0" fitWidth="643.0" layoutX="8.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resources/ImagesProjet/homePage.JPG" />
+         </image>
+      </ImageView>
+      <Button fx:id="startGame" layoutX="232.0" layoutY="258.0" mnemonicParsing="false" onAction="#onClickStartGame" prefHeight="70.0" prefWidth="187.0" text="Start" textAlignment="CENTER">
+         <font>
+            <Font name="18thCentury" size="35.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <MenuBar fx:id="menu" layoutX="8.0" layoutY="5.0" prefHeight="0.0" prefWidth="634.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="IA">
+               <items>
+                  <MenuItem fx:id="Configuration" mnemonicParsing="false" onAction="#onClickMenuConfiguration" text="Configuration" />
+                  <MenuItem fx:id="Modeles" mnemonicParsing="false" onAction="#onClickMenuModeles" text="Models" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem fx:id="about" mnemonicParsing="false" onAction="#onClickAbout" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Button fx:id="exitGame" layoutX="284.0" layoutY="422.0" mnemonicParsing="false" onAction="#onClickExitGame" prefHeight="34.0" prefWidth="82.0" text="EXIT" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="18thCentury" size="20.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="options" layoutX="264.0" layoutY="352.0" mnemonicParsing="false" onAction="#onClickOptions" prefHeight="51.0" prefWidth="120.0" text="Options">
+         <font>
+            <Font name="18thCentury" size="28.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fx:id="nav" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resources/ImagesProjet/rocket.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ufo" fitHeight="150.0" fitWidth="200.0" layoutX="490.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resources/ImagesProjet/ufo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

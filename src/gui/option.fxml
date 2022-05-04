@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.OptionController">
+   <children>
+      <ImageView fitHeight="460.0" fitWidth="643.0" layoutX="8.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resources/ImagesProjet/apprantissage-options.JPG" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363636" height="303.0" layoutX="104.0" layoutY="179.0" stroke="BLACK" strokeType="INSIDE" width="445.0" />
+      <Button fx:id="retour" layoutX="238.0" layoutY="414.0" mnemonicParsing="false" onAction="#onClickButtonRetour" prefHeight="49.0" prefWidth="178.0" text="Save and Quit">
+         <font>
+            <Font name="18thCentury" size="28.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="65.0" layoutX="118.0" layoutY="33.0" stroke="BLACK" strokeType="INSIDE" width="405.0" />
+      <Text fill="#f6ff00" layoutX="158.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OPTIONS" textAlignment="CENTER" wrappingWidth="352.13671875">
+         <font>
+            <Font name="18thCentury" size="51.0" />
+         </font>
+      </Text>
+      <MenuBar fx:id="menu" disable="true" layoutX="8.0" layoutY="5.0" prefHeight="0.0" prefWidth="634.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="IA">
+               <items>
+                  <MenuItem fx:id="Configuration" mnemonicParsing="false" text="Configuration" />
+                  <MenuItem fx:id="Modeles" mnemonicParsing="false" text="Modeles" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <CheckBox fx:id="audio1" layoutX="350.0" layoutY="367.0" mnemonicParsing="false" onAction="#onClickAudio1" selected="true" text="Audio Background" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="audio2" layoutX="154.0" layoutY="367.0" mnemonicParsing="false" onAction="#onClickAudio2" selected="true" text="Audio Effects" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </CheckBox>
+      <Text fill="WHITE" layoutX="137.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Audio Settings :">
+         <font>
+            <Font name="18thCentury" size="29.0" />
+         </font>
+      </Text>
+      <Line endX="46.0" layoutX="237.0" layoutY="356.0" startX="-100.0" stroke="WHITE" />
+      <Text fill="WHITE" layoutX="140.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How To Play :">
+         <font>
+            <Font name="18thCentury" size="29.0" />
+         </font>
+      </Text>
+      <Line endX="37.0" layoutX="242.0" layoutY="213.0" startX="-100.0" stroke="WHITE" />
+      <Text fill="#d4ff00" layoutX="135.0" layoutY="230.0" text="The game is played on a grid that's 3 squares by 3 squares.You are the Rocket(or a X in the normal game),  your friend (or the AI) is the Ufo (or O). Players take turns putting their marks in empty squares. The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner.If all 9 squares are full, the game ends in a tie." wrappingWidth="397.13671875">
+         <font>
+            <Font name="18thCentury" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

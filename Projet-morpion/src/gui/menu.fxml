@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MenuController">
+   <children>
+      <ImageView fitHeight="460.0" fitWidth="643.0" layoutX="8.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resources/ImagesProjet/StartGame.JPG" />
+         </image>
+      </ImageView>
+      <Button fx:id="HvsH" layoutX="248.0" layoutY="347.0" mnemonicParsing="false" onAction="#onClickButtonHvsH" onMouseClicked="#onClickButtonHvsH" prefHeight="23.0" prefWidth="154.0" text="H vs H">
+         <font>
+            <Font name="18thCentury" size="30.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="HvsIA" layoutX="230.0" layoutY="254.0" mnemonicParsing="false" onAction="#onClickButtonHvsIA" prefHeight="71.0" prefWidth="191.0" text="H vs IA">
+         <font>
+            <Font name="18thCentury" size="41.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <CheckBox fx:id="facile" layoutX="137.0" layoutY="451.0" mnemonicParsing="false" onAction="#onClickFacile" selected="true" text="Easy" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="difficile" layoutX="17.0" layoutY="451.0" mnemonicParsing="false" onAction="#onClickDifficile" text="Hard" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></CheckBox>
+      <Button fx:id="back" layoutX="267.0" layoutY="420.0" mnemonicParsing="false" onAction="#onClickButtonBack" prefHeight="36.0" prefWidth="110.0" text="Back" textFill="WHITE">
+         <font>
+            <Font name="18thCentury" size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <MenuBar fx:id="menu" disable="true" layoutX="8.0" layoutY="5.0" prefHeight="0.0" prefWidth="634.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="IA">
+               <items>
+                  <MenuItem fx:id="Configuration" mnemonicParsing="false" onAction="#onClickMenuConfiguration" text="Configuration" />
+                  <MenuItem fx:id="Modeles" mnemonicParsing="false" onAction="#onClickMenuModeles" text="Modeles" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
